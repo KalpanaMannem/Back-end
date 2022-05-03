@@ -32,6 +32,7 @@ router.post(
   "/product/create",
   requireSignin,
   adminMiddleware,
+  // upload.single("productPictures"),
   uploadS3.array("productPicture"),
   createProduct
 );

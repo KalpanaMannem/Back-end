@@ -31,7 +31,8 @@ app.get('/',(req,res,next)=>{
 mongoose
   .connect(
     // `mongodb+srv://${process.env.MONGO_DB_USER}:${process.env.MONGO_DB_PASSWORD}@cluster0.3st8d.mongodb.net/${process.env.MONGO_DB_DATABASE}?retryWrites=true&w=majority`,
-    `mongodb://${process.env.MONGO_DB_USER}:${process.env.MONGO_DB_PASSWORD}@cluster0-shard-00-00.3st8d.mongodb.net:27017,cluster0-shard-00-01.3st8d.mongodb.net:27017,cluster0-shard-00-02.3st8d.mongodb.net:27017/${process.env.MONGO_DB_DATABASE}?ssl=true&replicaSet=atlas-xyk3kg-shard-0&authSource=admin&retryWrites=true&w=majorit`,
+    `mongodb://${process.env.MONGO_DB_USER}:${process.env.MONGO_DB_PASSWORD}@cluster0-shard-00-00.3st8d.mongodb.net:27017,cluster0-shard-00-01.3st8d.mongodb.net:27017,cluster0-shard-00-02.3st8d.mongodb.net:27017/${process.env.MONGO_DB_DATABASE}?ssl=true&replicaSet=atlas-xyk3kg-shard-0&authSource=admin&retryWrites=true`,
+    
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
